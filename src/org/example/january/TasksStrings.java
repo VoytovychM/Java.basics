@@ -8,7 +8,11 @@ public class TasksStrings {
         findStringsWithShorterAverage(in);
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
-        identifyMonth(month);
+
+        String monthName = identifyMonth(month);
+        System.out.println(monthName);
+
+
     }
     // Ввести n строк с консоли. Вывести на консоль те строки,
     //длина которых меньше (больше) средней, а также длину.
@@ -36,11 +40,10 @@ public class TasksStrings {
     // соответствующего данному числу. (Осуществить проверку корректности
     // ввода чисел).
 
-    public static String[] identifyMonth (int month){
+    public static String identifyMonth (int month){
      String[] monthes = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         String valueToPrint = monthes[month -1];
-        System.out.println(valueToPrint);
-        return monthes;
+        return valueToPrint;
 
     }
 
